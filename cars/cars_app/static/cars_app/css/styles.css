@@ -1,0 +1,136 @@
+
+body {
+    /* background: url('https://images.hdqwalls.com/wallpapers/thumb/red-planet-night-minimal-4k-hg.jpg') no-repeat center center fixed; */
+    background-color: rgb(232, 232, 232);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 0.07em;
+    font-weight: lighter; */
+
+}
+
+.youtube-link {
+    color:#fff;
+    text-decoration: none;
+}
+
+.youtube-link:hover {
+    color: rgb(225, 225, 225);
+
+}
+
+.bottom-panel {
+    background-color: rgb(146, 23, 23);
+    margin-top: 1em;
+    font-size: 3em;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    color: #fff;
+
+}
+.navbar-brand {
+    margin: 0%;
+}
+
+.head-text {
+    font-size: 1.8em;
+}
+
+ .pagination .page-link {
+    border: none;
+}
+.pagination .page-link:hover {
+    color: rgb(202, 177, 177);
+}
+
+.activet {
+    background-color: rgb(197, 45, 45);
+} 
+
+.navbar-brand {
+    border-radius: 0.1em;
+    padding: 0.15em;
+    /* background-color: rgb(139, 5, 5); */
+}
+
+.form-custom {
+    width: 18em;
+    margin-left: auto;
+    margin-right: auto;
+    /* width: fit-content; */
+}
+
+.form-custom-ac {
+    width: 37em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-custom-el {
+    /* margin-top: 0.5em; */
+    margin-bottom: 0.5em;
+}
+
+.form-title {
+    text-align: center;
+}
+
+.btn-form {
+    text-align: center;
+    width: 100%;
+}
+
+.btn-submit-ac {
+    width: 30%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* background-color: rgb(114, 59, 59); */
+}
+
+.form-error {
+    color: red;
+}
+
+.wrapper {
+    height: 10vh;
+    display: grid;
+    place-items: center;
+}
+
+.typing-demo {
+    width: 39ch;
+    animation: typing 3.5s steps(39), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 1.4em;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent
+    }
+}
+
+.bg-image {
+    filter: blur(1px);
+    -webkit-filter: blur(7px);
+    position:  fixed;
+}
+
+.list-group {
+    background-color: transparent;
+}
+

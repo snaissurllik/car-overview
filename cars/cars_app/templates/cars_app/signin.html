@@ -1,0 +1,67 @@
+{% extends 'cars_app/base.html' %}
+{% load widget_tweaks %}
+
+{% block content %}
+{% comment %} <div class="form-custom shadow p-3 mb-5 bg-body rounded fs-4">
+    <div class="container">
+        <h1>{{ title }}</h1>
+        <form action="" method="post">
+        {% csrf_token %}
+        <div class="form-error">{{ form.non_field_errors }}</div>
+        {% for f in form %}
+        <label for="{{ f.id_for_label }}">{{ f.label }}</label>
+        <p>{{ f }}</p>
+        <div class="form-error">{{ f.errors }}</div>
+        {% endfor %}
+        <button type="submit" class="btn btn-danger mb-3">Sign in</button>
+    </form>
+    </div>
+</div> {% endcomment %}
+    
+<div class="form-custom shadow p-3 mb-5 bg-body rounded fs-4">
+    <h1 class="form-title">{{ title }}</h1>
+    <form method="post" novalidate enctype="multipart/form-data">
+    {% csrf_token %}
+
+    {% for hidden_field in form.hidden_fields %}
+        {{ hidden_field }}
+    {% endfor %}
+
+    {% if form.non_field_errors %}
+        <div class="alert alert-danger" role="alert">
+        {% for error in form.non_field_errors %}
+            {{ error }}
+        {% endfor %}
+        </div>
+    {% endif %}
+
+    {% for field in form.visible_fields %}
+        <div class="form-group form-custom-el">
+        {{ field.label_tag }}
+
+        {% if form.is_bound %}
+            {% if field.errors %}
+            {% render_field field class="form-control is-invalid" %}
+            {% for error in field.errors %}
+                <div class="invalid-feedback">
+                {{ error }}
+                </div>
+            {% endfor %}
+            {% else %}
+            {% render_field field class="form-control" %}
+            {% endif %}
+        {% else %}
+            {% render_field field class="form-control" %}
+        {% endif %}
+
+        {% if field.help_text %}
+            <small class="form-text text-muted">{{ field.help_text }}</small>
+        {% endif %}
+        </div>
+    {% endfor %}
+
+    <button type="submit" class="btn-form btn btn-danger btn-lg">Submit</button>
+    </form>
+</div>
+
+{% endblock content %}
