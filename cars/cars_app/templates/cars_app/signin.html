@@ -2,22 +2,7 @@
 {% load widget_tweaks %}
 
 {% block content %}
-{% comment %} <div class="form-custom shadow p-3 mb-5 bg-body rounded fs-4">
-    <div class="container">
-        <h1>{{ title }}</h1>
-        <form action="" method="post">
-        {% csrf_token %}
-        <div class="form-error">{{ form.non_field_errors }}</div>
-        {% for f in form %}
-        <label for="{{ f.id_for_label }}">{{ f.label }}</label>
-        <p>{{ f }}</p>
-        <div class="form-error">{{ f.errors }}</div>
-        {% endfor %}
-        <button type="submit" class="btn btn-danger mb-3">Sign in</button>
-    </form>
-    </div>
-</div> {% endcomment %}
-    
+
 <div class="form-custom shadow p-3 mb-5 bg-body rounded fs-4">
     <h1 class="form-title">{{ title }}</h1>
     <form method="post" novalidate enctype="multipart/form-data">
