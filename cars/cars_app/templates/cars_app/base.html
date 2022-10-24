@@ -80,23 +80,23 @@
             <ul class="pagination pagination-lg justify-content-center">
                 {% if page_obj.has_previous %}
                 <li class="page-item">
-                    <a class="page-link bg-dark text-white pagination-custom" href="?page={{ page_obj.previous_page_number }}">&laquo;</a>
+                    <a class="custom-b btn btn-lg btn-dark" href="?page={{ page_obj.previous_page_number }}">&laquo;</a>
                 </li>
                 {% endif %}
                 {% for p in paginator.page_range %}
                 {% if page_obj.number == p %}
                 <li class="page-item">
-                    <p class="activet page-link text-white pagination-custom">{{ p }}</p>
+                    <p class="custom-b custom-dis-b btn btn-lg btn-dark disabled">{{ p }}</p>
                 </li>
                 {% elif p >= page_obj.number|add:-2 and p <= page_obj.number|add:2 %}
                 <li class="page-item">
-                    <a class="page-link bg-dark text-white pagination-custom" href="?page={{ p }}">{{ p }}</a>
+                    <a class="custom-b btn btn-lg btn-dark" href="?page={{ p }}">{{ p }}</a>
                 </li>
                 {% endif %}
                 {% endfor %}
                 {% if page_obj.has_next %}
                 <li class="page-item">
-                    <a class="page-link bg-dark text-white pagination-custom" href="?page={{ page_obj.next_page_number }}">&raquo;</a>
+                    <a class="custom-b btn btn-lg btn-dark" href="?page={{ page_obj.next_page_number }}">&raquo;</a>
                 </li>
                 {% endif %}
             </ul>
